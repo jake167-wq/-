@@ -1,0 +1,76 @@
+#ifndef _GPIO_INIT_H
+#define _GPIO_INIT_H
+#include "sys.h"
+/*=========采矿功能==========*/
+
+/*===========================*/
+/*=========兑换功能==========*/
+
+/*===========================*/
+/*=========障碍块功能========*/
+
+/*===========================*/
+/*=========弹药舱============*/
+
+/*===========================*/
+/*==========救援=============*/
+/*===========================*/
+//void GPIO_Init();
+//电磁阀
+#define AC_TF_Channel_1_ON  GPIO_SetBits(GPIOD,GPIO_Pin_2)         //弹丸阀门打开
+#define AC_TF_Channel_1_OFF GPIO_ResetBits(GPIOD,GPIO_Pin_2)
+
+#define AC_TF_Channel_2_ON  GPIO_SetBits(GPIOC,GPIO_Pin_10)         //夹手推出..
+#define AC_TF_Channel_2_OFF GPIO_ResetBits(GPIOC,GPIO_Pin_10)
+
+#define AC_TF_Channel_3_ON  GPIO_SetBits(GPIOB,GPIO_Pin_4)         //旋转夹手..
+#define AC_TF_Channel_3_OFF GPIO_ResetBits(GPIOB,GPIO_Pin_4)
+
+#define AC_TF_Channel_4_ON  GPIO_SetBits(GPIOC,GPIO_Pin_11)         //夹手开关..
+#define AC_TF_Channel_4_OFF GPIO_ResetBits(GPIOC,GPIO_Pin_11)
+
+#define AC_TF_Channel_5_ON  GPIO_SetBits(GPIOB,GPIO_Pin_3)         //弹药箱弹出
+#define AC_TF_Channel_5_OFF GPIO_ResetBits(GPIOB,GPIO_Pin_3)
+
+#define AC_TF_Channel_6_ON  GPIO_SetBits(GPIOC,GPIO_Pin_12)         //整体抬升
+#define AC_TF_Channel_6_OFF GPIO_ResetBits(GPIOC,GPIO_Pin_12)
+
+#define AC_TF_Channel_7_ON  GPIO_SetBits(GPIOB,GPIO_Pin_5)         //救援
+#define AC_TF_Channel_7_OFF GPIO_ResetBits(GPIOB,GPIO_Pin_5)
+
+#define AC_TF_Channel_8_ON  GPIO_SetBits(GPIOB,GPIO_Pin_6)         //救援卡
+#define AC_TF_Channel_8_OFF GPIO_ResetBits(GPIOB,GPIO_Pin_6)
+
+
+#define BUZZER_ON    GPIO_ResetBits(GPIOB,GPIO_Pin_9)         	//蜂鸣器
+#define BUZZER_OFF   GPIO_SetBits(GPIOB,GPIO_Pin_9)	
+
+#define 	GREEN_OFF 			GPIO_SetBits(GPIOB,GPIO_Pin_8);
+#define 	GREEN_ON 				GPIO_ResetBits(GPIOB,GPIO_Pin_8);
+#define 	RED_OFF 				GPIO_SetBits(GPIOB,GPIO_Pin_9);
+#define 	RED_ON 					GPIO_ResetBits(GPIOB,GPIO_Pin_9);
+#define 	RED_TOGGLE 			GPIO_ToggleBits(GPIOB,GPIO_Pin_9);
+#define 	GREEN_TOGGLE 		GPIO_ToggleBits(GPIOB,GPIO_Pin_8);
+
+#define 	LED1_OFF 			GPIO_SetBits(GPIOB,GPIO_Pin_14);
+#define 	LED2_OFF 			GPIO_SetBits(GPIOB,GPIO_Pin_15);
+#define 	LED3_OFF 			GPIO_SetBits(GPIOC,GPIO_Pin_6);
+#define 	LED4_OFF 			GPIO_SetBits(GPIOC,GPIO_Pin_7);
+#define 	LED5_OFF 			GPIO_SetBits(GPIOC,GPIO_Pin_8);
+#define 	LED6_OFF 			GPIO_SetBits(GPIOC,GPIO_Pin_9);
+#define 	LED7_OFF 			GPIO_SetBits(GPIOA,GPIO_Pin_8);
+#define 	LED8_OFF 			GPIO_SetBits(GPIOA,GPIO_Pin_15);
+
+#define 	LED1_ON 			GPIO_ResetBits(GPIOB,GPIO_Pin_14);
+#define 	LED2_ON 			GPIO_ResetBits(GPIOB,GPIO_Pin_15);
+#define 	LED3_ON 			GPIO_ResetBits(GPIOC,GPIO_Pin_6);
+#define 	LED4_ON 			GPIO_ResetBits(GPIOC,GPIO_Pin_7);
+#define 	LED5_ON 			GPIO_ResetBits(GPIOC,GPIO_Pin_8);
+#define 	LED6_ON 			GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+#define 	LED7_ON 			GPIO_ResetBits(GPIOA,GPIO_Pin_8);
+#define 	LED8_ON 			GPIO_ResetBits(GPIOA,GPIO_Pin_15);
+
+
+
+void GPIO_Init_Configuration(void);
+#endif
